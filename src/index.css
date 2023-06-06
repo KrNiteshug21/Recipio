@@ -1,13 +1,398 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+:root {
+  --maxWidth: 1100px;
+  --primaryColor: #004953;
+  --primaryTextColor: whitesmoke;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  font-size: 30px;
+  min-width: 600px;
+  height: 150vh;
+}
+
+.main {
+  background-color: beige;
+}
+
+.navContainer {
+  background-color: var(--primaryColor);
+  height: 100px;
+  color: var(--primaryTextColor);
+}
+
+.navbar {
+  max-width: var(--maxWidth);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.headerContainer {
+  background-color: var(--primaryColor);
+  color: var(--primaryTextColor);
+}
+
+.header {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+.headerContent {
+  font-size: 45px;
+}
+
+.headerImg img {
+  border-radius: 10%;
+  width: 600px;
+  height: auto
+}
+
+.btnContainer {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btnContainer p {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.hrLine {
+  margin: 25px 0;
+}
+
+.btnPrime {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.readBtn {
+  background-color: black;
+  color: var(--primaryTextColor);
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.guideContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 80px 0;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.bigCard {
+  background-color: whitesmoke;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bigCard .btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.smallCard {
+  height: 190px;
+  background-color: white;
+  display: flex;
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.smallCard .btnContainer {
+  padding: 10px 0;
+}
+
+.info {
+  padding-right: 5px;
+}
+
+.smallCard .imgContainer img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 10px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+.btnPrime2 {
+  background-color: transparent;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.smallCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.kitchenContainer {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.kitchenHeading {
+  display: flex;
+  align-items: center;
+  color: #004953;
+}
+
+.kitchenContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kitchenCards {
+  background-color:burlywood;
+  border-radius: 10px;
+  width: 10rem;
+  height: 9rem;
+  display: grid;
+  place-content: center;
+}
+
+.kitchenCards i {
+  width: 70px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.seasonContainer {
+  padding: 60px 0;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.seasonHeading{
+  display: flex;
+  align-items: center;
+  color: #004953;
+}
+
+.seasonContent {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.seasonCards {
+  width: 200px;
+  height: 300px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.seasonCards img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seasonCards h3 ,
+.seasonCards p {
+  font-size: 20px;
+  padding: 5px 10px;
+  line-height: 1.2;
+}
+
+.seasonCards p {
+  color: grey;
+}
+
+.footerContainer {
+  background-color: bisque;
+  color:#004953;
+  padding: 30px 0;
+  line-height: 1.2;
+}
+
+.footer {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footerContent div {
+  flex-grow: 1;
+}
+
+.footerLinkContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLinks a {
+  color: #004953;
+  text-decoration: none;
+}
+
+.formContainer {
+  background-color: #004953;
+  color: whitesmoke;
+  display: grid;
+  place-content: center;
+  padding: 2rem 0;
+  border-radius: 1rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  gap: 1rem;
+}
+
+.form input[type= 'text'] {
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  height: 2rem;
+  border: none;
+}
+
+.form input[type= 'submit']  {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0 0.75rem;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.recipeContainer {
+  background-color: beige;
+  padding: 40px 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.recipeContent {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+
+.recipeHeading {
+  color: var(--primaryColor);
+}
+
+.filterPara {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.dropdown {
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  border: none;
+  background-color: #494F55;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.recipeCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 1.5rem 0;
+}
+
+.recipeCards {
+  background-color: #fff;
+  flex: 1 1 16.25rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.recipeCards h3,
+.recipeCards p {
+  padding: 0.5rem 1.25rem;
+  font-size: 1.5rem;
+}
+
+.recipeCards img {
+  width: 100%;
+  height: auto;
 }
