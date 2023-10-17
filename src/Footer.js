@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footerContainer">
-      <footer className="footer">
+      <footer className="footer setWidth">
         <div className="footerHeading">
           <h1>My Food</h1>
         </div>

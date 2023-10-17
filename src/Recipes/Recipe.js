@@ -4,9 +4,13 @@ import Fooditems from "./Fooditems";
 const Recipe = () => {
   return (
     <main className="recipeContainer">
-      <div className="recipeContent">
-        <div className="recipeHeading"><h1>PASTA</h1></div>
-        <div><hr className="hrLine"></hr></div>
+      <div className="recipeContent setWidth">
+        <div className="recipeHeading">
+          <h1>PASTA</h1>
+        </div>
+        <div>
+          <hr className="hrLine"></hr>
+        </div>
         <div className="filterPara">
           <p>Filter articles</p>
           <p>{data.length} items</p>
@@ -26,7 +30,9 @@ const Recipe = () => {
           </select>
         </div>
         <div className="recipeCardContainer">
-          {data.map(dish => <Fooditems dish={dish}/>)}
+          {data.map((dish) => (
+            <Fooditems dish={dish} />
+          ))}
         </div>
       </div>
     </main>
