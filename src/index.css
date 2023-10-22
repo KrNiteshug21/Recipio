@@ -5,8 +5,10 @@
 }
 :root {
   --maxWidth: min(calc(100% - 3rem), 1200px);
-  --primaryColor: #004953;
-  --primaryTextColor: whitesmoke;
+  --primary-color: #004953;
+  --primary-text-color: whitesmoke;
+  --secondary-text-color: rgba(0, 0, 0, 0.7);
+  --primary-bg-color: beige;
 }
 
 .App {
@@ -25,13 +27,13 @@ button {
 }
 
 .main {
-  background-color: beige;
+  background-color: var(--primary-bg-color);
 }
 
 .navContainer {
-  background-color: var(--primaryColor);
+  background-color: var(--primary-color);
   height: 100px;
-  color: var(--primaryTextColor);
+  color: var(--primary-text-color);
 }
 
 .navbar {
@@ -49,12 +51,15 @@ button {
 
 .nav {
   display: flex;
-  gap: 10px;
+}
+nav a {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
 }
 
 .headerContainer {
-  background-color: var(--primaryColor);
-  color: var(--primaryTextColor);
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
 }
 
 .header {
@@ -110,7 +115,7 @@ button {
 
 .readBtn {
   background-color: black;
-  color: var(--primaryTextColor);
+  color: var(--primary-text-color);
   font-size: 20px;
   width: 150px;
   height: 40px;
@@ -203,6 +208,7 @@ button {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding-top: 1.5rem;
 }
 
 .kitchenCards {
@@ -270,9 +276,6 @@ button {
   line-height: 1.2;
 }
 
-.footer {
-}
-
 .footerContent {
   display: flex;
   justify-content: space-between;
@@ -310,14 +313,14 @@ button {
   border-radius: 1rem;
 }
 
-.form {
+.footerForm {
   display: flex;
   justify-content: space-between;
   padding-top: 1.2rem;
   gap: 1rem;
 }
 
-.form input[type="text"] {
+.footerForm input[type="text"] {
   flex-grow: 1;
   border-radius: 0.5rem;
   padding: 0 0.5rem;
@@ -325,7 +328,7 @@ button {
   border: none;
 }
 
-.form input[type="submit"] {
+.footerForm input[type="submit"] {
   border-radius: 0.5rem;
   border: none;
   padding: 0 0.75rem;
@@ -334,16 +337,13 @@ button {
 }
 
 .recipeContainer {
-  background-color: beige;
+  background-color: var(--primary-bg-color);
   padding: 40px 0;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.recipeContent {
+  color: var(--secondary-text-color);
 }
 
 .recipeHeading {
-  color: var(--primaryColor);
+  color: var(--primary-color);
 }
 
 .filterPara {
@@ -395,4 +395,96 @@ button {
 .recipeCards img {
   width: 100%;
   height: auto;
+}
+
+/*    Contacts        */
+.contactPage {
+  background-color: var(--primary-bg-color);
+  padding-block: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+.contactPageWrapper {
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+.contactPageWrapper > div {
+  padding-block: 1.5rem;
+}
+
+.contactDetail {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contactForm {
+  width: 48%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  display: none;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea {
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.submitBtn {
+  width: 6rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+.form textarea {
+  height: 25vh;
+}
+
+.socialContacts {
+  width: 48%;
+  display: grid;
+  place-content: center;
+  color: #004953;
+}
+
+.socialContacts div {
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (width <= 835px) {
+  .contactForm {
+    width: 100%;
+  }
+  .socialContacts {
+    width: 100%;
+  }
 }

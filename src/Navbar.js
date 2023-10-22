@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,10 +8,42 @@ const Navbar = () => {
           <h1>Recipio</h1>
         </Link>
         <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/recipes">Recipes</Link>
-          <Link to="/tips">Tips</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            style={({ isActive }) => ({
+              color: isActive ? "#004953" : "",
+              backgroundColor: isActive ? "whitesmoke" : "",
+            })}
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({
+              color: isActive ? "#004953" : "",
+              backgroundColor: isActive ? "whitesmoke" : "",
+            })}
+            to="/recipes"
+          >
+            Recipes
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({
+              color: isActive ? "#004953" : "",
+              backgroundColor: isActive ? "whitesmoke" : "",
+            })}
+            to="/tips"
+          >
+            Tips
+          </NavLink>
+          <NavLink
+            style={({ isActive }) => ({
+              color: isActive ? "#004953" : "",
+              backgroundColor: isActive ? "whitesmoke" : "",
+            })}
+            to="/contacts"
+          >
+            Contact
+          </NavLink>
         </nav>
       </div>
     </div>

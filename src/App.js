@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Recipe from "./Recipes/Recipe";
 import { Route, Routes } from "react-router-dom";
 import Content from "./Home/Content";
+import Contacts from "./Contact/Contact";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Content />} />
         <Route path="/recipes" element={<Recipe />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer />
     </div>

@@ -1,7 +1,13 @@
-import data from "./data.json";
 import Fooditems from "./Fooditems";
 
 const Recipe = () => {
+  const recipes = Array(12).fill({
+    recipeName: "Creamy Spaghetti",
+    recipeImg:
+      "https://api.lifegetsbetter.ph/uploads/recipes/featured/creamy-chicken-spaghetti-featured.jpg",
+    recipeDesc: "Quick and easy to make",
+    read: "READ",
+  });
   return (
     <main className="recipeContainer">
       <div className="recipeContent setWidth">
@@ -13,7 +19,7 @@ const Recipe = () => {
         </div>
         <div className="filterPara">
           <p>Filter articles</p>
-          <p>{data.length} items</p>
+          <p>{recipes.length} items</p>
         </div>
         <div className="filter">
           <select className="dropdown" name="popularity" id="popularity">
@@ -30,8 +36,8 @@ const Recipe = () => {
           </select>
         </div>
         <div className="recipeCardContainer">
-          {data.map((dish) => (
-            <Fooditems dish={dish} />
+          {recipes.map((dish, index) => (
+            <Fooditems dish={dish} index={index} />
           ))}
         </div>
       </div>
